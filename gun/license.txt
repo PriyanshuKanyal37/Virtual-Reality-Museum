@@ -1,0 +1,11 @@
+Model Information:
+* title:	Highpoly Colt Single Action Army .45
+* source:	https://sketchfab.com/3d-models/highpoly-colt-single-action-army-45-b02548a3ecb84e3cbcfc6f4e2cf03992
+* author:	Blarb (https://sketchfab.com/Blarb)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Highpoly Colt Single Action Army .45" (https://sketchfab.com/3d-models/highpoly-colt-single-action-army-45-b02548a3ecb84e3cbcfc6f4e2cf03992) by Blarb (https://sketchfab.com/Blarb) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
