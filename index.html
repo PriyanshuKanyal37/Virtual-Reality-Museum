@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+   <title>Museum</title>
+</head>
+<body>
+  <a-scene>
+      <a-entity position="4 6 0">
+      <a-camera></a-camera>
+    </a-entity>
+
+    <!-- Sky -->
+    <a-sky color="#6EBAA7"></a-sky>
+
+    <!-- Ground/floor -->
+    <a-plane position="0 0 0" rotation="-90 0 0" width="60" height="60" color="grey"></a-plane>
+
+    <!-- Walls -->
+    <a-box position="-30 10 0" width="1" height="20" depth="60" src="#wallTexture"></a-box>
+    <a-box position="30 10 0" width="1" height="20" depth="60" src="#wallTexture"></a-box>
+    <a-box position="0 10 -30" width="60" height="20" depth="1" src="#wallTexture"></a-box>
+    <a-box position="0 10 30" width="60" height="20" depth="1" src="#wallTexture"></a-box>
+
+    <!-- Decorative Ceiling -->
+    <a-plane position="0 20 0" rotation="90 0 0" width="60" height="60" src="#ceilingTexture"></a-plane>
+
+    <!-- glTF Model 1 -->
+    <a-cylinder position="0 1 12" radius="1.6" height="6" color="offwhite"></a-cylinder>
+    <a-entity gltf-model="#model1" position="0 4 12.5" scale="2 2 2"></a-entity>
+
+    <!-- glTF Model 2 -->
+    <a-cylinder position="0 1 0" radius="1.6" height="6" color="offwhite"></a-cylinder>
+    <a-entity gltf-model="#model2" position="0 6 0" scale="2 2 2"></a-entity>
+
+    <!-- glTF Model 3 -->
+    <a-cylinder position="0 1 -12" radius="1.6" height="6" color="offwhite"></a-cylinder>
+    <a-entity gltf-model="#model3" rotation="0 180 0" position="0 4 -11" scale="16 16 16"></a-entity>
+
+    <!-- Photo Frame 1  -->
+    <a-box position="-12 15.5 -28.9" width="10.4" height="0.4" depth="0.2" color="brown"></a-box>
+    <a-box position="-12 4.5 -28.9" width="10.4" height="0.4" depth="0.2" color="brown"></a-box>
+    <a-box position="-17 10 -28.9" width="0.4" height="10.4" depth="0.2" color="brown"></a-box>
+    <a-box position="-7 10 -28.9" width="0.4" height="10.4" depth="0.2" color="brown"></a-box>
+
+    <a-image src="#wallImage1" position="-12 10 -29" width="10" height="10"></a-image>
+    <a-entity light="type: point; color: #FFFFFF; intensity: 3; distance: 20" position="-12 5 -29"></a-entity>
+
+   <!-- Stand photo 1 -->
+<a-entity id="stand1" position="-12 0 -26.9" rotation="0 0 0">
+  <a-box width="5" height="0.1" depth="0.2" color="#654321"></a-box>
+  <a-box width="0.1" height="4" depth="0.1" position="0 2 0.15" color="#654321"></a-box>
+  <a-plane position="0 4 0.2" color="black" rotation="-15 0 0" width="4.8" height="2" color="#f0f0f0" text="value: The Mona Lisa, painted by Leonardo da Vinci in the early 16th century, is one of the most famous artworks in the world. Its renowned for several reasons: the enigmatic smile of the subject, Lisa Gherardini, the meticulous detail in da Vinci technique, and its status as a masterpiece of Renaissance art. The painting is housed in the Louvre Museum in Paris, where it attracts millions of visitors annually. Its small size and captivating expression have contributed to its enduring allure and cultural significance.; width:3; "></a-plane>
+</a-entity>
+
+<!-- Stand photo 2 -->
+<a-entity id="stand2" position="-25.9 0 -10" rotation="0 90 0">
+  <a-box width="5" height="0.1" depth="0.2" color="#654321"></a-box>
+  <a-box width="0.1" height="4" depth="0.1" position="0 2 0.15" color="#654321"></a-box>
+  <a-plane position="0 4 0.2" rotation="-15 0 0" width="4.8" height="2" color="black" text="value:The Old Guitarist is a famous painting created by Pablo Picasso during his Blue Period, which lasted from 1901 to 1904. This period is characterized by somber paintings rendered predominantly in shades of blue and blue-green, reflecting Picasso mood and emotional state during that time.; width:3;"></a-plane>
+</a-entity>
+
+<!-- Stand photo 3 -->
+<a-entity id="stand3" position="25.9 0 13" rotation="0 -90 0">
+  <a-box width="5" height="0.1" depth="0.2" color="#654321"></a-box>
+  <a-box width="0.1" height="4" depth="0.1" position="0 2 0.15" color="#654321"></a-box>
+  <a-plane position="0 4 0.2" rotation="-15 0 0" width="4.8" height="2" color="black" text="value:Girl with a Pearl Earring is a renowned painting created by the Dutch artist Johannes Vermeer around 1665. It is often referred to as the Mona Lisa of the North due to its enigmatic and captivating quality. The painting depicts a young woman, possibly a maid, wearing an exotic dress and a large pearl earring.; width:3"></a-plane>
+</a-entity>
+
+<!-- Stand photo 4 -->
+<a-entity id="stand4" position="-2 0 25.9" rotation="0 180 0">
+  <a-box width="5" height="0.1" depth="0.2" color="#654321"></a-box>
+  <a-box width="0.1" height="4" depth="0.1" position="0 2 0.15" color="#654321"></a-box>
+  <a-plane position="0 4 0.2" rotation="-15 0 0" width="4.8" height="2" color="black" text="value:Bhagat Singh was a prominent Indian revolutionary who played a crucial role in the Indian independence movement. Born on September 28, 1907, in Punjab, India, he became a symbol of resistance against British colonial rule. Bhagat Singh is remembered for his bravery, strong socialist beliefs, and advocacy for complete independence from British rule through revolutionary means.; width:3;"></a-plane>
+</a-entity>
+
+
+    <!-- Photo Frame 2  -->
+    <a-box position="-28.9 15.5 -10" rotation="0 90 0" width="10.4" height="0.4" depth="0.2" color="brown"></a-box>
+    <a-box position="-28.9 4.5 -10" rotation="0 90 0" width="10.4" height="0.4" depth="0.2" color="brown"></a-box>
+    <a-box position="-28.9 10 -15" rotation="0 90 0" width="0.4" height="10.4" depth="0.2" color="brown"></a-box>
+    <a-box position="-28.9 10 -5" rotation="0 90 0" width="0.4" height="10.4" depth="0.2" color="brown"></a-box>
+    <a-image src="#wallImage2" position="-29 10 -10" rotation="0 90 0" width="10" height="10"></a-image>
+    <a-entity light="type: point; color: #FFFFFF; intensity: 3; distance: 20" position="-29 5 -10"></a-entity>
+
+
+    <!-- Photo Frame 3 -->
+    <a-box position="28.9 15.5 13" rotation="0 -90 0" width="10.4" height="0.4" depth="0.2" color="brown"></a-box>
+    <a-box position="28.9 4.5 13" rotation="0 -90 0" width="10.4" height="0.4" depth="0.2" color="brown"></a-box>
+    <a-box position="28.9 10 8" rotation="0 -90 0" width="0.4" height="10.4" depth="0.2" color="brown"></a-box>
+    <a-box position="28.9 10 18" rotation="0 -90 0" width="0.4" height="10.4" depth="0.2" color="brown"></a-box>
+    <a-image src="#wallImage3" position="29 10 13" rotation="0 -90 0" width="10" height="10"></a-image>
+    <a-entity light="type: point; color: #FFFFFF; intensity: 3; distance: 20" position="29 4.5 13"></a-entity>
+
+
+    <!-- New Photo Frame 4 -->
+    <a-box position="-2 15.5 28.9" width="10.4" height="0.4" depth="0.2" color="brown"></a-box>
+    <a-box position="-2 4.5 28.9" width="10.4" height="0.4" depth="0.2" color="brown"></a-box>
+    <a-box position="-7 10 28.9" width="0.4" height="10.4" depth="0.2" color="brown"></a-box>
+    <a-box position="3 10 28.9" width="0.4" height="10.4" depth="0.2" color="brown"></a-box>
+    <a-image src="#wallImage4" position="-2 10 29" width="10" height="10"></a-image>
+
+    <!-- Car Model -->
+    <a-entity gltf-model="#carModel" rotation="0 90 0" position="18 5.5 -24" scale="0.03 0.03 0.03"></a-entity>
+
+    <!-- Door  -->
+    <a-entity id="door" gltf-model="#doorModel" position="24 0 29.4" rotation="0 180 0" scale="2 2 8"></a-entity>
+
+    <!-- Canon -->
+    <a-entity gltf-model="#newModel" rotation="0 90 0" position="-20 1 14" scale="0.1 0.1 0.1"></a-entity>
+
+    <!-- Rectangular Stand  -->
+    <a-box position="25 2 -2" width="4" height="4" depth="7" color="#D6D2D1"></a-box>
+    <a-entity gltf-model="#ship" rotation="0 90 0" position="24 4.2 -0.5" scale="1.5 1.5 1.5"></a-entity>
+
+    <!-- AC -->
+    <a-entity gltf-model="#airConditioner" position="0 15 -29" scale="0.5 0.5 0.5"></a-entity>
+    <!---->
+
+<!-- Model in the Center of the Room -->
+<a-entity gltf-model="#centerModel" position="2 -1 -2" scale="3 5 4"></a-entity>
+<a-entity gltf-model="#centerModel" rotation="0 90 0" position="2 -1 -2" scale="3 5 4"></a-entity>
+<a-entity gltf-model="#centerModel" rotation="0 90 0" position="-2.5 -1 -2" scale="3 5 4"></a-entity>
+<a-entity gltf-model="#centerModel" position="2 -1 2.5" scale="3 5 4"></a-entity>
+<!--gun barricade--> 
+<a-entity gltf-model="#centerModel" position="2 -1 -10" scale="3 5 4"></a-entity>
+<a-entity gltf-model="#centerModel" rotation="0 90 0" position="2 -1 -14.5" scale="3 5 4"></a-entity>
+<a-entity gltf-model="#centerModel" rotation="0 90 0" position="-2.5 -1 -14.5" scale="3 5 4"></a-entity>
+<a-entity gltf-model="#centerModel" position="2 -1 -14.5" scale="3 5 4"></a-entity>
+<!--camera barricade--> 
+<a-entity gltf-model="#centerModel" position="2 -1 10" scale="3 5 4"></a-entity>
+<a-entity gltf-model="#centerModel" rotation="0 90 0" position="2 -1 10" scale="3 5 4"></a-entity>
+<a-entity gltf-model="#centerModel" rotation="0 90 0" position="-2.5 -1 10" scale="3 5 4"></a-entity>
+<a-entity gltf-model="#centerModel" position="2 -1 14.5" scale="3 5 4"></a-entity>
+<!--cannon barricade--> 
+<a-entity gltf-model="#centerModel" position="-12 -1 5" scale="9 5 4"></a-entity>
+<a-entity gltf-model="#centerModel" rotation="0 90 0" position="-12 -1 5" scale="12 5 4"></a-entity>
+<a-entity gltf-model="#centerModel" rotation="0 0 0" position="-12 -1 23" scale="8 5 4"></a-entity>
+
+<!--car barricade--> 
+<a-entity gltf-model="#centerModel" position="26 -1 -19" scale="14 5 4"></a-entity>
+<a-entity gltf-model="#centerModel" rotation="0 90 0" position="5 -1 -27" scale="5 5 4"></a-entity>
+<!-- ship barriacede -->
+<a-entity gltf-model="#centerModel" position="28 -1 5" scale="4 5 4"></a-entity>
+<a-entity gltf-model="#centerModel" rotation="0 90 0" position="22 -1 -9.9" scale="10 5 4"></a-entity>
+<a-entity gltf-model="#centerModel" position="28 -1 -10" scale="4 5 4"></a-entity>
+
+<!-- Display Stand near Model 1 -->
+<a-entity gltf-model="#dis" rotation="0 -30 0" position="3.5 0.5 15" scale="0.05 0.05 0.05"></a-entity>
+<a-entity gltf-model="#dis" rotation="0 -30 0" position="3.5 0.5 2.5" scale="0.05 0.05 0.05"></a-entity>
+<a-entity gltf-model="#dis"  rotation="0 -30 0" position="3.5 0.5 -9.5" scale="0.05 0.05 0.05"></a-entity>
+<a-entity gltf-model="#dis" rotation="0 90 0" position="-12 0.5 3" scale="0.05 0.05 0.05"></a-entity>
+<a-entity gltf-model="#dis" rotation="0 30 0" position="2.7 0 -19" scale="0.05 0.05 0.05"></a-entity>
+<a-entity gltf-model="#dis" rotation="0 -120 0" position="22.5 0 7" scale="0.05 0.05 0.05"></a-entity>
+
+ <!-- Roof Ceiling Lights -->
+    <a-entity gltf-model="#ceilingLightModel" position="0 25 12" rotation="0 45 0" scale="0.1 0.1 0.1"></a-entity>
+    <a-entity gltf-model="#ceilingLightModel" position="0 25 0" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+    <a-entity gltf-model="#ceilingLightModel" position="0 25 -12" rotation="0 -45 0" scale="0.1 0.1 0.1"></a-entity>
+
+
+    <!-- light -->
+  
+    <a-entity light="type: point; color: #FFFFFF; intensity: 3; distance: 30" position="0 20 8"></a-entity>
+
+    <a-entity light="type: point; color: #FFFFFF; intensity: 3; distance: 30" position="0 20 0"></a-entity>
+  
+    <a-entity light="type: point; color: #FFFFFF; intensity: 3; distance: 30" position="0 20 -11"></a-entity>
+
+    <a-entity light="type: ambient; color: #ffffff; intensity: 0.7"></a-entity>
+    
+      <!-- light model -->
+      <a-entity gltf-model="#light" rotation="0 90 0" position="16 15 -24" scale="0.3 0.3 0.3"></a-entity>
+      <a-entity light="type: point; color: #FFFFFF; intensity: 2; distance: 30" position="16 2 -30"></a-entity>
+
+      <a-entity gltf-model="#light" rotation="0 0 0" position="-20 15 14" scale="0.3 0.3 0.3"></a-entity>
+      <a-entity light="type: point; color: #FFFFFF; intensity: 2; distance: 30" position="-20 2 14"></a-entity>
+
+      <a-entity gltf-model="#light" rotation="0 0 0" position="24 15 -2.5" scale="0.3 0.3 0.3"></a-entity>
+      <a-entity light="type: point; color: #FFFFFF; intensity: 2; distance: 30" position="24 2 -2.5"></a-entity>
+    
+      <!-- photo blub -->
+<a-entity gltf-model="#plight" position="-12 17 -28" rotation="0 0 0" scale="10 10 10"></a-entity>
+<a-entity gltf-model="#plight" position="-26 16 -10" rotation="0 90 0" scale="10 10 10"></a-entity>
+<a-entity gltf-model="#plight" position="28 17 13" rotation="0 -90 0" scale="10 10 10"></a-entity>
+<a-entity gltf-model="#plight" position="-2 17 28" rotation="0 180 0" scale="10 10 10"></a-entity>
+
+<!-- Display Area -->
+<a-entity id="display" position="3.6 5.7 -9.6" rotation="-40.5 -30 0 ">
+  <a-plane color="black" width="1.75" height="1.5"></a-plane>
+  <a-entity id="display-content" size="50 50 50" position="0 0.1 0.01" text="value: Colt Single Action Army: The Iconic Revolver
+The Colt Single Action Army (SAA), also known as the Peacemaker, is one of the most famous revolvers in history. Introduced in 1873 by Colt Manufacturing Company, it became an iconic symbol of the American West and was widely used by lawmen, outlaws, and cowboys.; width: 1.5;"></a-entity>
+</a-entity>
+</a-entity>
+
+    <!--model1 content-->
+    <a-entity id="display" position="3.6 5.7 14.8" rotation="-40.5 -30 0 ">
+      <a-plane color="black" width="1.75" height="1.5"></a-plane>
+      <a-entity id="display-content" size="50 50 50" position="0 0.1 0.01" text="value: Minolta Autocord: A Classic TLR Camera
+The Minolta Autocord, introduced in 1955, is a twin-lens reflex (TLR) camera renowned for its excellent build quality and exceptional lens performance. It became a favorite among photographers for its ease of use and the high-quality images it produced.;  width: 1.5;"></a-entity>
+    </a-entity>
+    </a-entity>
+    <!--model 2 content-->
+    <a-entity id="display" position="3.6 5.7 2.4" rotation="-40.5 -30 0 ">
+      <a-plane color="black" width="1.75" height="1.5"></a-plane>
+      <a-entity id="display-content" size="50 50 50" position="0 0.1 0.01" text="value: The telephone, an invention that revolutionized communication, has a rich history that dates back to the late 19th century. The early models of telephones, often referred to as old telephones, were instrumental in connecting people over long distances and laid the foundation for modern telecommunications.; width: 1.5;"></a-entity>
+    </a-entity>
+    </a-entity>
+    <!--car content -->
+    <a-entity id="display" position="2.7 5.2 -19" rotation="-40.5 30 0 ">
+      <a-plane color="black" width="1.75" height="1.5"></a-plane>
+      <a-entity id="display-content" size="50 50 50" position="0 0.1 0.01" text="value: Ford Model A: A Pioneering Automobile
+The Ford Model A, produced by the Ford Motor Company from 1927 to 1931, was the successor to the iconic Model T. It marked a significant advancement in automotive design and engineering, setting new standards for the industry and gaining immense popularity among consumers.; width:1.5 ;"></a-entity>
+    </a-entity>
+    </a-entity>
+        <!--cannon content -->
+        <a-entity id="display" position="-12.2 5.7 3" rotation="-40.5 90 0 ">
+          <a-plane color="black" width="1.75" height="1.5"></a-plane>
+          <a-entity id="display-content" size="50 50 50" position="0 0.1 0.01" text="value: Cannons have played a crucial role in military history, evolving from simple designs to complex artillery pieces. These weapons, used in warfare for centuries, revolutionized the way battles were fought and had a significant impact on the outcomes of numerous conflicts.Early Development
+Origins: The concept of cannons can be traced back to ancient China, where gunpowder was first invented in the 9th century. The earliest cannons were developed during the Song Dynasty (960-1279 AD).; width:1.4;"></a-entity>
+        </a-entity>
+        </a-entity>
+        <!--ship content-->
+        <a-entity id="display" position="22.6 5.2 7.1" rotation="-40.5 -120 0 ">
+          <a-plane color="black" width="1.75" height="1.5"></a-plane>
+          <a-entity id="display-content" size="50 50 50" position="0 0.1 0.01" text="value: RMS Titanic: The Ill-Fated Ocean Liner
+The RMS Titanic, one of the most famous ships in history, was a British passenger liner that tragically sank on its maiden voyage in 1912. Built by the White Star Line, the Titanic was heralded as an engineering marvel and epitomized luxury and grandeur, but its sinking remains one of the deadliest maritime disasters in history.; width:1.5;"></a-entity>
+        </a-entity>
+        </a-entity>
+<a-antity id="#ship" position=""
+
+    <!-- Asset definitions -->
+    <a-assets >
+      <img id="ceilingTexture" src="assets/ceiling-texture.jpg" />
+      <img id="wallTexture" src="assets/wall-texture.jpg" />
+      <img id="wallImage1" src="assets/Mona_Lisa.jpg" />
+      <img id="wallImage2" src="assets/paint.jpg" />
+      <img id="wallImage3" src="assets/girl.jpg" />
+      <img id="wallImage4" src="assets/singh.jpeg" />
+      <a-asset-item id="model1" src="models/scene.gltf"></a-asset-item>
+      <a-asset-item id="model2" src="phone/scene.gltf"></a-asset-item>
+      <a-asset-item id="model3" src="gun/scene.gltf"></a-asset-item>
+      <a-asset-item id="doorModel" src="door/scene.gltf"></a-asset-item>
+      <a-asset-item id="newModel" src="canon/scene.gltf"></a-asset-item>
+      <a-asset-item id="carModel" src="car/scene.gltf"></a-asset-item>
+      <a-asset-item id="ship" src="titanic/scene.gltf"></a-asset-item>
+      <a-asset-item id="airConditioner" src="ac/scene.gltf"></a-asset-item>
+<a-asset-item id="centerModel" src="barricade/scene.gltf"></a-asset-item>
+<a-asset-item id="dis" src="display/scene.gltf"></a-asset-item>
+<a-asset-item id="ceilingLightModel" src="bulb/scene.gltf"></a-asset-item>
+<a-asset-item id="light" src="newlight/scene.gltf"></a-asset-item>
+<a-asset-item id="plight" src="photolight/scene.gltf"></a-asset-item>
+
+    </a-assets>
+  </a-scene>
+</body>
+</html>
